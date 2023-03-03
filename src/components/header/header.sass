@@ -1,0 +1,124 @@
+@import '../../variables.sass'
+.header
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 64px
+    box-shadow: 0px 4px 5px #E9EDF3
+    &__container
+        width: 1440px
+        align-items: center
+        display: flex
+        justify-content: space-between
+        padding-left: 120px
+    &__date
+        font-weight: 400
+        font-size: 15px
+        line-height: 22.2px
+        color: $text
+    &__analyst
+        width: 594px
+        height: 34px
+        display: flex
+        justify-content: space-between
+        &-item
+            width: 156px
+            display: flex
+            flex-wrap: wrap
+            align-content: space-between
+            justify-content: space-between
+        &-title
+            color: #122945
+            font-weight: 400
+            font-size: 14px
+            line-height: 20.72px
+            letter-spacing: -0.3px
+            margin-top: 0
+            margin-bottom: 0
+            &_distinct
+                &-green
+                    color: #00A775
+                &-yellow
+                    color: #FFB800
+                &-red
+                    color: #EA1A4F
+        &-bar
+            width: 40%
+            height: 6px
+            &_green
+                background-color: #28A879
+            &_yellow
+                background-color: #FFD500
+            &_red
+                background-color: #EA1A4F
+            &-wrapper
+                width: 156px
+                background-color: #DEE6F5
+                border-radius: 12px
+                display: flex
+                justify-content: flex-start
+    &__search
+        &-icon
+            width: 16px
+            height: 16px
+            cursor: pointer
+    &__name
+        color: $text
+        font-size: 15px
+        font-weight: 400
+        line-height: 21px
+        text-align: right
+        &-wrapper
+            width: 284px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            cursor: pointer
+        &-icon
+            color: $filter
+            width: 12px
+            height: 7.41px
+    &__profile
+        display: flex
+        justify-content: space-between
+        width: 62px
+        align-items: center
+        cursor: pointer
+        &-photo
+            width: 40px
+            height: 40px
+            border-radius: 50px
+        &-icon
+            color: $filter
+            width: 12px
+            height: 7.41px
+@media screen and (max-width: 1920px)
+    .header
+        &__container
+            width: 77.5vw
+            padding-left: 5vw
+        &__date
+            font-size: 12px
+        &__analyst
+            width: 410px
+            &-item
+                width: 130px
+            &-title
+                font-size: 11px
+        &__search
+            &-icon
+                padding-left: 20px
+                margin-right: 100px
+        &__name
+            &-wrapper
+                width: 110px
+            &-icon
+                margin-left: 5px
+@media screen and (max-width: 1700px)
+    .header
+        &__container
+            width: 70vw
+@media screen and (max-width: 1205px)
+    .header
+        &__container
+            width: 50vw

@@ -1,0 +1,233 @@
+@import '../../variables.sass'
+.list-header
+    &__container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 1440px
+        padding-top: 20px
+    &__main-data
+        position: relative
+        display: flex
+        justify-content: space-between
+        width: 308px
+        &-wrapper
+            width: 100%
+            display: flex
+            justify-content: flex-end
+    &__balance
+        color: $text-typed
+        font-weight: 500
+        &-button
+            background-color: #fff
+            border-radius: 48px
+            border: none
+            width: 145px
+            height: 40px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-weight: 400
+            font-size: 14px
+            line-height: 20.72px
+            color: $text
+            padding-left: 12px
+            padding-right: 12px
+            cursor: pointer
+            &:hover
+                .list-header__balance
+                    transition: .3s
+                    color: #0024CB
+        &-icon
+            width: 24px
+            height: 24px
+            color: #005FF8
+    &__date-filter
+        display: flex
+        justify-content: space-between
+        width: 115px
+        align-items: center
+        color: $filter
+        font-weight: 400
+        font-size: 14px
+        cursor: pointer
+    &__button-left
+        width: 6.17px
+        height: 10px
+        cursor: pointer
+    &__button-right
+        width: 6.17px
+        height: 10px
+        transform: rotate(180deg)
+        cursor: pointer
+    &__date
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 58px
+        &-icon
+            width: 16px
+            height: 18px
+        &_active
+            color: $button
+    &__search
+        &-wrapper
+            width: 482px
+            color: $filter
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin-top: 20px
+            border-radius: 48px
+            margin-bottom: 5px
+            padding-left: 18px
+            position: relative
+            &_active
+                outline: 1px solid $button
+        &-input
+            color: $text-typed
+            font-weight: 400
+            font-size: 14px
+            line-height: 19.6px
+            margin-left: 12px
+            height: 40px
+            border: none
+            background: transparent
+            outline: none
+            &::placeholder
+                color: #5E7793
+                font-weight: 400
+                font-size: 14px
+                line-height: 19.6px
+        &-icon
+            width: 16px
+            height: 16px
+        &-close
+            display: none
+            position: absolute
+            right: 13px
+            top: 50%
+            margin-top: -7px
+            width: 14px
+            height: 14px
+            cursor: pointer
+    &__filters
+        &-list
+            display: flex
+            justify-content: space-between
+            width: 753px
+            list-style-type: none
+            margin-bottom: 0
+        &-item
+            font-weight: 400
+            font-size: 14px
+            line-height: 20.72px
+            color: #5E7793
+            display: flex
+            align-items: center
+            cursor: pointer
+        &-icon
+            margin-left: 8px
+            width: 10px
+            height: 5.83px
+            color: $filter
+            &_active
+                transform: rotate(180deg)
+.date-filter
+    &__context
+        width: 204px
+        box-shadow: 0px 0px 26px rgba(233, 237, 243, 0.8)
+        border-radius: 4px
+        border: 1px solid #EAF0FA
+        background-color: #fff
+        position: absolute
+        top: 100%
+        right: 0
+        display: none
+        &-field
+            color: #899CB1
+            height: 40px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding-left: 20px
+            cursor: pointer
+            &:hover
+                background-color: rgba(0, 95, 248, .13)
+                color: $text-typed
+                transition: .3s
+            &_active
+                color: $button
+        &-custom
+            height: 72px
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            padding-left: 20px
+            margin-top: 12px
+            align-items: center
+            &-title
+                color: $text-typed
+                width: 100%
+                text-align: left
+            &-input
+                border: none
+                width: 116px
+                height: 28px
+                &::placeholder
+                    color: $filter
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 28px
+                &:focus
+                    outline: none
+            &-img
+                margin-left: 29px
+.filters-item
+    &__context
+        &-type
+            display: none
+        &-collaborators
+            display: none
+        &-calls
+            display: none
+        &-sources
+            display: none
+        &-assesments
+            display: none
+        &-errors
+            display: none
+.active
+    display: block
+@media screen and (max-width: 1920px)
+    .list
+        &-header
+            &__container
+                width: 70vw
+            &__main-data
+                width: 250px
+            &__balance
+                &-button
+                    width: 110px
+                    height: 30px
+                    font-size: 11px
+                &-icon
+                    width: 12px
+                    height: 12px
+            &__filters-list
+                width: 520px
+            &__search
+                &-wrapper
+                    width: 300px
+                &-input
+                    font-size: 11px
+                    &::placeholder
+                        font-size: 11px
+            &__filters
+                &-item
+                    font-size: 11px
+@media screen and (max-width: 1205px)
+    .list
+        &-header
+            &__container
+                width: 60vw

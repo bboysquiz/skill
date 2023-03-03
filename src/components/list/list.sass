@@ -1,0 +1,96 @@
+@import '../../variables.sass'
+.list
+    &__container
+        width: 1440px
+        display: flex
+        flex-wrap: wrap
+        padding-left: 120px
+    &__table
+        width: 100%
+        border-collapse: collapse
+        border: none
+        &-wrapper
+            background-color: #fff
+            width: 1440px
+            padding-left: 40px
+            box-shadow: 0px 4px 5px #E9EDF3
+            border-radius: 8px
+        &-head
+            color: $text
+            font-weight: 400
+            font-size: 14px
+        &-row
+            width: 100%
+            border-bottom: 1px solid #EAF0FA
+            height: 63px
+            &-title
+                width: 100%
+                border-bottom: 1px solid #EAF0FA
+                height: 60px
+.table-data
+    &__type
+        &-img
+            width: 12.52px
+            height: 12.52px
+    &__time
+        font-weight: 400
+        font-size: 15px
+        line-height: 21px
+        color: $text-typed
+    &__collaborator
+        &-img
+            width: 32px
+            height: 32px
+    &__call
+        color: $text-typed
+        font-weight: 400
+        font-size: 15px
+        line-height: 21px
+    &__source
+        color: #5e7793
+        font-weight: 400
+        font-size: 15px
+        line-height: 21px
+    &__assesment
+        &-button
+            color: $button
+            border: 1px solid #002CFB
+            border-radius: 4px
+            background: #fff
+            width: 122px
+            height: 40px
+            cursor: pointer
+@media screen and (max-width: 1920px)
+    .list
+        &__container
+            width: 80vw
+            padding-left: 5vw
+        &__table
+            &-head
+                font-size: 11px
+.table-data
+    &__type
+        &-img
+            width: 10px
+            height: 10px
+    &__time
+        font-size: 11px
+    &__call
+        font-size: 11px
+    &__source
+        font-size: 11px
+    &__assesment
+        &-button
+            font-size: 11px
+            height: 25px
+            width: 100px
+    &__duration
+        font-size: 11px
+@media screen and (max-width: 1700px)
+    .list
+        &__container
+            width: 70vw
+@media screen and (max-width: 1205px)
+    .list
+        &__container
+            width: 60vw
