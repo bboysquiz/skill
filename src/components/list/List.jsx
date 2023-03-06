@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import ListHeader from '../listHeader/ListHeader.jsx'
-import ListItem from '../list/ListItem.jsx'
-import './list.sass'
+import React, { useState, useEffect } from 'react';
+import { mangoApi } from '../../api/MangoApi';
+import ListHeader from '../listHeader/ListHeader.jsx';
+import ListItem from '../list/ListItem.jsx';
+import './list.sass';
 
 const List = () => {
+  const [listArray, setListArray] = useState([]);
 
+  useEffect(() => {
+    mangoApi.getList({
+      date_start: '2022-03-03'
+    }).then((res) => {
+      setListArray(res.results);
+    });
+  }, []);
 
   return (
     <section className='list'>
@@ -25,7 +33,11 @@ const List = () => {
               </tr>
             </thead>
             <tbody>
-              <ListItem />
+              {
+                listArray.map((itemProps, index) => (
+                  <ListItem key={index} {...itemProps} />
+                ))
+              }
             </tbody>
           </table>
         </div>
